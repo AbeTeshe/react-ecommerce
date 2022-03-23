@@ -1,0 +1,154 @@
+.header-container {
+    background-color: #bbb;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+.header {
+    height: 70px;
+    display: flex;
+    max-width: 1500px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header-title {
+    flex: 1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.header-links {
+    flex: 3;
+}
+.header-links ul, .header-actions ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links {
+    text-decoration: none;
+    color: black;
+}
+
+.header-links li, .header-actions li {
+    list-style: none;
+    margin-right: 30px;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header-actions {
+    flex: 2;
+}
+
+.header-actions li {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.header-icon {
+    margin-left: 5px;
+    font-size: 28px !important;
+}
+
+.cart-value {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #ab7a5f;
+    top: -10px;
+    right: -12px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    font-size: 18px ;
+}
+
+.user-login {
+    text-decoration: none;
+    color: black;
+}
+
+#check {
+    display: none;
+}
+.checkbtn {
+    display: none;
+}
+
+@media screen  and (max-width : 850px) {
+    
+
+    .header-actions {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .header-title {
+        font-size: 20px;
+    }
+    .header-actions li {
+        font-size: 20px;
+    }
+    .header-icon {
+        font-size: 20px !important;
+    }
+}
+
+@media screen  and (max-width : 700px){
+    .header-links ul {
+        position: fixed;
+        width: 100px;
+        height: 120px;
+        top: 50px;
+        background-color: #bbb;
+        flex-direction: column;
+        right: -100%;
+        text-align: center;
+        transform: all 0.5s;
+        align-items: flex-start;
+        justify-content: start;
+        
+    }
+
+    .header-links li {
+        margin-left: 10px;
+        margin-top: 7px;
+    }
+
+    #check:checked ~ .ulClass {
+        left: 120px;
+    }
+
+    .checkbtn {
+        display: flex;
+        margin-left: 20px;
+        z-index: 3;
+    }
+
+    .menuIcon {
+        margin-right: 100px;
+        font-size: 40px !important;
+        
+    }
+    .header-links {
+        flex: 0.5;
+    }
+
+    .header-actions {
+        margin-left: -100px;
+    }
+
+ }
